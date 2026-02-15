@@ -18,7 +18,9 @@ giga = gigachat.GigaChat(
 def ai_response(prompt):
     try:
         response = giga.chat(
-            str(get_pc_info()) + "обьясни состояние пк простым языком" + prompt
+            str(get_pc_info())
+            + "обьясни состояние пк простым языком и в конце дай рекомендации"
+            + prompt
         )
         print("\nОтвет GigaChat:", response.choices[0].message.content)
         response_text = response.choices[0].message.content
